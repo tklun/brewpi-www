@@ -33,6 +33,8 @@ app.get('/', routes.index);
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 
+  brewPiCube.start();
+
   var myBrewPi = new BrewPi(),
       cubeLogger = brewPiCube.createDataEmitter();
 
@@ -52,7 +54,6 @@ http.createServer(app).listen(app.get('port'), function(){
     });
   });
 
-  brewPiCube.start();
   myBrewPi.start();
 
 });
