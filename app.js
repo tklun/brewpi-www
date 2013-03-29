@@ -3,10 +3,12 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes')
-  , http = require('http')
-  , path = require('path');
+var express = require('express'),
+    routes = require('./routes'),
+    http = require('http'),
+    path = require('path'),
+    BrewPi = require('brewpi'),
+    brewPiCube = require('brewpi-cube');
 
 var app = express();
 
@@ -30,4 +32,9 @@ app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
+
+  var myBrewPi = new BrewPi();
+
+  brewPiCube.start();
+  myBrewPi.start();
 });
