@@ -36,7 +36,7 @@ http.createServer(app).listen(app.get('port'), function(){
   var myBrewPi = new BrewPi(),
       cubeLogger = brewPiCube.createDataEmitter();
 
-  myBrewPi.on('newTemperatureData', function() {
+  myBrewPi.on('newTemperatureData', function(dataObj) {
     cubeLogger.send({
       type: 'brewpi',
       time: new Date(),
