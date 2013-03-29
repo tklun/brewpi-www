@@ -33,8 +33,26 @@ app.get('/', routes.index);
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 
-  var myBrewPi = new BrewPi();
+  var myBrewPi = new BrewPi(),
+      cubeLogger = brewPiCube.createDataEmitter();
+
+  myBrewPi.on('newTemperatureData', function() {
+    cubeLogger.send({
+      type: 'brewpi',
+      time: new Date(),
+      data: {
+        beerName: 'Maibock',
+        beerTempCurrent: dataObj.BeerTemp,
+        beerTempSetting: dataObj.BeerSet,
+        beerAnnotation: dataObj.BeerAnn || '',
+        fridgeTempCurrent: dataObj.FridgeTemp,
+        fridgeSetting: dataObj.FridgeSet,
+        fridgeAnnotation: dataObj.FridgeAnn || ''
+      }
+    });
+  });
 
   brewPiCube.start();
   myBrewPi.start();
+
 });
