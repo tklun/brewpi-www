@@ -2,6 +2,45 @@ doctype 5
 html
   head
     title= title
+    link(rel='stylesheet', href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css')
+    link(rel='stylesheet', href='/stylesheets/lib/rickshaw/graph.css')
+    link(rel='stylesheet', href='/stylesheets/lib/rickshaw/detail.css')
+    link(rel='stylesheet', href='/stylesheets/lib/rickshaw/legend.css')
+    link(rel='stylesheet', href='/stylesheets/lib/rickshaw/extensions.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js')
+
+    script(src='/javascripts/lib/d3.v2.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Class.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Compat.ClassList.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Renderer.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Renderer.Area.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Renderer.Line.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Renderer.Bar.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Renderer.ScatterPlot.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.RangeSlider.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.HoverDetail.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Annotate.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Legend.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Axis.Time.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Behavior.Series.Toggle.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Behavior.Series.Order.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Behavior.Series.Highlight.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Smoother.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Unstacker.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Fixtures.Time.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Fixtures.Number.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Fixtures.RandomData.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Fixtures.Color.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Color.Palette.js')
+    script(src='/javascripts/lib/rickshaw/Rickshaw.Graph.Axis.Y.js')
+
+    script(src='/javascripts/lib/rickshaw/extensions.js')
+
+    script(src='/javascript/lib/brewpi.graph.js')
